@@ -29,7 +29,7 @@ Smart Calendar is a visually appealing and interactive date-tracking application
 
 1. **Live Clock**: JavaScript fetches the current time and updates it every second.
 2. **Interactive Days**: Hovering over any day applies a zoom-in effect with a color change.
-3![alt text](image.png). **Today Highlighting**: The current date is highlighted to make it stand out.
+3. **Today Highlighting**: The current date is highlighted to make it stand out.
 
 ---
 
