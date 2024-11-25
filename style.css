@@ -1,0 +1,138 @@
+/* Center the calendar with a modern look */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #c9d6ff, #e2e2e2); /* Gradient background */
+  font-family: "Arial", sans-serif; /* Global font */
+}
+
+/* Calendar container */
+#calendar {
+  width: 600px; /* Spacious layout */
+  border: 2px solid #4CAF50; /* Green border */
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Subtle gradient */
+  border-radius: 15px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Floating effect */
+  text-align: center;
+}
+
+/* Live time styling */
+#live_time {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Weekdays row styling */
+#weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Seven columns for weekdays */
+  gap: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4CAF50; /* Green text */
+  text-transform: uppercase;
+}
+
+#weekdays div {
+  padding: 10px;
+  background: #f0f0f0; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Calendar header */
+#calendar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#calendar_header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#calendar_header #prevMonth,
+#calendar_header #nextMonth {
+  cursor: pointer;
+  padding: 15px 20px;
+  background: #ffffff;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  border-radius: 50%; /* Circular buttons */
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+#calendar_header #prevMonth:hover,
+#calendar_header #nextMonth:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Calendar content grid */
+#calendar_content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Seven columns */
+  gap: 15px; /* Balanced spacing */
+  margin-top: 20px;
+}
+
+#calendar_content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #e9f5e9; /* Soft green tint */
+  border-radius: 50%; /* Circular cells */
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth animations */
+}
+
+#calendar_content div:hover {
+  transform: scale(1.1); /* Slight hover effect */
+  background: #4CAF50;
+  color: white;
+}
+
+/* Blank cells */
+#calendar_content .blank {
+  background: transparent;
+  cursor: default;
+}
+
+/* Today cell */
+#calendar_content .today {
+  background: #ffeb3b;
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Glow effect */
+}
+
+/* Weekend cells */
+#calendar_content .weekend {
+  background: #f44336;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
